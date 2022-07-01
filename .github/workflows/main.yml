@@ -35,5 +35,5 @@ jobs:
             cd /app/book
             git pull
             cd /usr/share/nginx/html
-            cp -rf /app/book/book/* /usr/share/nginx/html/book
+            cp -rf /app/book/book /usr/share/nginx/html
             echo 'success!'
