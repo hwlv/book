@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>my book</title>
+        <title>知识库</title>
         <meta name="robots" content="noindex" />
 
 
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded "><a href="my-first-chapter.html"><strong aria-hidden="true">1.</strong> My First Chapter</a></li><li class="chapter-item expanded "><a href="nested/index.html"><strong aria-hidden="true">2.</strong> Nested example</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="nested/sub-chapter.html"><strong aria-hidden="true">2.1.</strong> Sub-chapter</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">介绍</a></li><li class="chapter-item expanded "><a href="js/first.html"><strong aria-hidden="true">1.</strong> js 原理</a></li><li class="chapter-item expanded "><a href="async/promise.html"><strong aria-hidden="true">2.</strong> js 异步</a></li><li class="chapter-item expanded "><a href="react/index.html"><strong aria-hidden="true">3.</strong> react</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="nested/sub-chapter.html"><strong aria-hidden="true">3.1.</strong> Sub-chapter</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="nested/third-chapter.html"><strong aria-hidden="true">3.1.1.</strong> third-chapter</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -111,7 +111,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">my book</h1>
+                    <h1 class="menu-title">知识库</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -143,11 +143,56 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p>2</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="my-first-chapter"><a class="header" href="#my-first-chapter">My First Chapter</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="nested-example"><a class="header" href="#nested-example">Nested example</a></h1>
+                        <h1 id="介绍"><a class="header" href="#介绍">介绍</a></h1>
+<p>用mdBook搭建的知识库，主要用来记录学到的知识</p>
+<div style="break-before: page; page-break-before: always;"></div><p>22</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="promise的特性"><a class="header" href="#promise的特性">promise的特性</a></h3>
+<h3 id="案例参考"><a class="header" href="#案例参考">案例参考</a></h3>
+<ol>
+<li>promise 交替执行</li>
+</ol>
+<pre><code class="language-js">
+Promise.resolve()
+  .then((res) =&gt; {
+    console.log(1);
+  })
+  .then((res) =&gt; {
+    console.log(2);
+  })
+  .then((res) =&gt; {
+    console.log(3);
+  })
+  .then((res) =&gt; {
+    console.log(4);
+  })
+  .then((res) =&gt; {
+    console.log(5);
+  });
+
+Promise.resolve()
+  .then((res) =&gt; {
+    console.log(10);
+  })
+  .then((res) =&gt; {
+    console.log(20);
+  })
+  .then((res) =&gt; {
+    console.log(30);
+  })
+  .then((res) =&gt; {
+    console.log(40);
+  })
+  .then((res) =&gt; {
+    console.log(50);
+  });
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="react"><a class="header" href="#react">react</a></h1>
+<p>常用周期图谱，经常忘，记录下来</p>
+<p>https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rstvsvoyj21dh0u042s.jpg" alt="image-20220701223254973" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sub-chapter"><a class="header" href="#sub-chapter">Sub-chapter</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><p>3</p>
 
                     </main>
 
@@ -166,22 +211,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
