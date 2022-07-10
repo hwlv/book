@@ -3,7 +3,7 @@
 
 常用周期图谱，经常忘，记录下来
 
-https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+[生命周期](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 
 
 
